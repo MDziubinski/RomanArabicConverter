@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"pl.polsl.lab.mikolaj.dziubinski.arabicromanconverter","c":"Main","l":"arabicRoman(int)"},{"p":"pl.polsl.lab.mikolaj.dziubinski.arabicromanconverter","c":"Main","l":"Main()","url":"%3Cinit%3E()"},{"p":"pl.polsl.lab.mikolaj.dziubinski.arabicromanconverter","c":"Main","l":"main(String[])","url":"main(java.lang.String[])"}]

@@ -1,0 +1,49 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-private
+-source
+'11'
+-sourcepath
+'C:/Users/mikol/Documents/Studies/JiMaD/Project/ArabicRomanConverter/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/mikol/Documents/Studies/JiMaD/Project/ArabicRomanConverter/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ArabicRomanConverter 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/mikol/Documents/Studies/JiMaD/Project/ArabicRomanConverter/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'ArabicRomanConverter 1.0-SNAPSHOT API'
+pl.polsl.lab.mikolaj.dziubinski.arabicromanconverter
+'C:/Users/mikol/Documents/Studies/JiMaD/Project/ArabicRomanConverter/src/main/java/pl/polsl/lab/mikolaj/dziubinski/arabicromanconverter/Main.java'
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\src\main\java = 1634066196193
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\allclasses-index.html = 1634159642333
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\allclasses.html = 1634159642342
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\allpackages-index.html = 1634159642335
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\constant-values.html = 1634159642301
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\deprecated-list.html = 1634159642340
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\element-list = 1634159642289
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\help-doc.html = 1634159642345
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\index-all.html = 1634159642330
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\index.html = 1634159642343
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\member-search-index.js = 1634159642328
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\member-search-index.zip = 1634159642328
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\overview-tree.html = 1634159642313
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\package-search-index.js = 1634159642317
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\package-search-index.zip = 1634159642325
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\script.js = 1634159642349
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\search.js = 1634159642350
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\stylesheet.css = 1634159642347
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\type-search-index.js = 1634159642326
+C:\Users\mikol\Documents\Studies\JiMaD\Project\ArabicRomanConverter\target\site\apidocs\type-search-index.zip = 1634159642327
