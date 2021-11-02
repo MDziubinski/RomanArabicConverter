@@ -6,7 +6,7 @@ import java.util.Scanner;
  *View represents and manages the user interface
  * 
  * @author Mikolaj Dziubinski
- * @version 1.1
+ * @version 1.2
  */
 public class View {
     

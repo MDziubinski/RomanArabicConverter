@@ -7,7 +7,7 @@ import pl.polsl.mikolaj.dziubinski.view.View;
  *Program that converts Arabic number provided by the user to roman numerals, and vice versa.
  * 
  * @author Mikolaj Dziubinski
- * @version 1.1
+ * @version 1.2
  */
 public class RomanArabicConverter {
     

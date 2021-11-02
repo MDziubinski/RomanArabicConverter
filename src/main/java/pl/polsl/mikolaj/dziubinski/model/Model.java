@@ -4,7 +4,7 @@ package pl.polsl.mikolaj.dziubinski.model;
  *Model allows to perform all of the needed calculations 
  * 
  * @author mikol
- * @version 1.1
+ * @version 1.2
  */
 public class Model {
     /**All specific roman signs */
@@ -24,10 +24,24 @@ public class Model {
      * Verifies the correctness of the input
      * 
      * @param num passed input argument
-     * @return integer which marks if the input is correct and distinguish if it is an Arabic numeral or Roman numeral
-     * @throws pl.polsl.mikolaj.dziubinski.model.Model.InputException when invalid input 
+     * @return integer which marks if the input is correct and distinguish if it is an Arabic numeral or Roman numeral 
      */
-    public int validateInput(String num) throws InputException
+    public int validateInput(String num) 
+    {
+        int inputVal = 0;
+        try 
+        {
+           inputVal = checkInput(num);
+        }
+        catch(InputException ex)
+        {
+           inputVal = 0;
+           
+        }
+        return inputVal;
+    }
+    
+    public int checkInput(String num) throws InputException
     {
         if(num.matches("\\d+") && !num.matches("0"))
         {   
@@ -39,10 +53,9 @@ public class Model {
         }
         else
         {
-            throw new InputException("Invalid Input");
+            throw new InputException();
         }
     }
-    
     /**
      * Verifies if passed input array is valid 
      * 
@@ -57,13 +70,13 @@ public class Model {
     /**
      * Converts Arabic numeral into roman numeral
      * 
-     * @param a Arabic numeral
+     * @param num Arabic number
      */
-    public void getRomanNumeral(int a)
+    public void getRomanNumeral(int num)
     {
         for (int i = 0; i < arabicNums.length; i++)
         {
-            currentNum = a / arabicNums[i];
+            currentNum = num / arabicNums[i];
             if (currentNum == 0)
             {
                 continue; //skips current iteration of the loop
@@ -72,7 +85,7 @@ public class Model {
             {
                 finalRoman += romanNums[i];
             }
-            a = a % arabicNums[i];
+            num = num % arabicNums[i];
         }
     }
     
@@ -161,23 +174,15 @@ public class Model {
     }
     
     /**
-     * Exception class for ojects when passed input is invalid
+     * Exception class for objects when passed input is invalid
      */
-    class InputException extends RuntimeException
+    public class InputException extends Exception
     {
         /**
-         * Non parameter contructor
+         * Non parameter constructor
          */
         public InputException()
         {}
         
-        /**
-         * Exception class constructor
-         * @param message message to display
-         */
-        public InputException(String message)
-        { 
-            super(message);
-                    }
     }
 }

@@ -1,0 +1,59 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-private
+-source
+'11'
+-sourcepath
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'RomanArabicConverter 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'RomanArabicConverter 1.0-SNAPSHOT API'
+pl.polsl.mikolaj.dziubinski.controller
+pl.polsl.mikolaj.dziubinski.model
+pl.polsl.mikolaj.dziubinski.view
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java/pl/polsl/mikolaj/dziubinski/controller/Controller.java'
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java/pl/polsl/mikolaj/dziubinski/controller/package-info.java'
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java/pl/polsl/mikolaj/dziubinski/controller/RomanArabicConverter.java'
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java/pl/polsl/mikolaj/dziubinski/model/Model.java'
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java/pl/polsl/mikolaj/dziubinski/model/package-info.java'
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java/pl/polsl/mikolaj/dziubinski/view/package-info.java'
+'C:/Users/mikol/Documents/Studies/JiMaD/RomanArabicConverter/src/main/java/pl/polsl/mikolaj/dziubinski/view/View.java'
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\src\main\java = 1635864124404
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\allclasses-index.html = 1635877716562
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\allclasses.html = 1635877716568
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\allpackages-index.html = 1635877716564
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\constant-values.html = 1635877716495
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\deprecated-list.html = 1635877716567
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\element-list = 1635877716470
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\help-doc.html = 1635877716575
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\index-all.html = 1635877716559
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\index.html = 1635877716571
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\member-search-index.js = 1635877716557
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\member-search-index.zip = 1635877716557
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\overview-summary.html = 1635877716572
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\overview-tree.html = 1635877716528
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\package-search-index.js = 1635877716540
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\package-search-index.zip = 1635877716554
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\script.js = 1635877716578
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\search.js = 1635877716579
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\serialized-form.html = 1635877716500
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\stylesheet.css = 1635877716577
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\type-search-index.js = 1635877716555
+C:\Users\mikol\Documents\Studies\JiMaD\RomanArabicConverter\target\site\apidocs\type-search-index.zip = 1635877716556

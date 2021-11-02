@@ -7,7 +7,7 @@ import pl.polsl.mikolaj.dziubinski.view.View;
  * Controller class allows to separate model and view classes
  *
  * @author Mikolaj Dziubinski
- * @version 1.1
+ * @version 1.2
  */
 public class Controller {
     /**View object */
@@ -20,7 +20,7 @@ public class Controller {
     private String[] inputArray = {};
     /**Arabic numeral input */
     private int arabicInput = 0;
-    /**Flag for input verifiaction */
+    /**Flag for input verification */
     private int inputVerif = 0;
     
     public Controller(View view, Model model)
@@ -47,18 +47,10 @@ public class Controller {
             do
             {
                 temp = temp.toUpperCase();
-                try
-                {
-                    inputVerif = controllerModel.validateInput(temp);
-                }
-                catch(Exception ex)
-                {
-                    inputVerif = 0;
-                    System.out.println(ex.toString());
-                }
+                inputVerif = controllerModel.validateInput(temp);
 
                 if (inputVerif == 0)
-                {
+                {   
                     temp = temp.replaceAll(temp, controllerView.getNewInput(temp));
                 }
             }
