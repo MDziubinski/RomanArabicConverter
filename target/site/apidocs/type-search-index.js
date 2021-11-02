@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"pl.polsl.lab.mikolaj.dziubinski.arabicromanconverter","l":"Main"}]
