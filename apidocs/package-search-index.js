@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"pl.polsl.mikolaj.dziubinski.controller"},{"l":"pl.polsl.mikolaj.dziubinski.model"},{"l":"pl.polsl.mikolaj.dziubinski.view"}]
