@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"pl.polsl.mikolaj.dziubinski.controller","l":"Controller"},{"p":"pl.polsl.mikolaj.dziubinski.model","l":"Model.InputException"},{"p":"pl.polsl.mikolaj.dziubinski.model","l":"Model"},{"p":"pl.polsl.mikolaj.dziubinski.controller","l":"RomanArabicConverter"},{"p":"pl.polsl.mikolaj.dziubinski.view","l":"View"}]
