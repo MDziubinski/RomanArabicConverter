@@ -23,6 +23,5 @@ public class RomanArabicConverter {
         
         Controller controller = new Controller(view, model);
         controller.processInput(args);
-        
     }
 }

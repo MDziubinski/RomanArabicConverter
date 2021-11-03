@@ -3,6 +3,10 @@ package pl.polsl.mikolaj.dziubinski.controller;
 import pl.polsl.mikolaj.dziubinski.model.Model;
 import pl.polsl.mikolaj.dziubinski.view.View;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Controller class allows to separate model and view classes
  *
@@ -17,12 +21,10 @@ public class Controller {
     /**Roman numeral input */
     private String romanInput = "";
     /**Input array of strings */
-    private String[] inputArray = {};
+    private List<String> inputList = new ArrayList<String>();
     /**Arabic numeral input */
     private int arabicInput = 0;
-    /**Flag for input verification */
-    private int inputVerif = 0;
-    
+
     public Controller(View view, Model model)
     {
         this.controllerView = view;
@@ -35,15 +37,18 @@ public class Controller {
      * @param num argument array passed to main 
      */
     public void processInput(String[] num)
-    {   
-        inputArray = num;
+    {
+        Collections.addAll(inputList, num);
         //Verifying if the passed array is empty or not
-        while(controllerModel.validateInputArray(inputArray) == true)
+        while(controllerModel.validateInputList(inputList) == true)
         {
-                inputArray = controllerView.getInputArray();
+            inputList = controllerView.getInputList();
         }
         //Verifying if array elements are valid 
-        for (String temp : inputArray) {
+        for (String temp:inputList) {
+
+            //Flag for input verification
+            int inputVerif = 0;
             do
             {
                 temp = temp.toUpperCase();
@@ -78,7 +83,7 @@ public class Controller {
      */
     public void countArabicToRomanNum(int num)
     {
-       controllerModel.getRomanNumeral(num);
+       controllerModel.getRomanNumeralList(num);
        updateView(controllerModel.passResultArabic(), arabicInput, 0);
     }
     

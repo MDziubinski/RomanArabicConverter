@@ -1,6 +1,6 @@
 package pl.polsl.mikolaj.dziubinski.view;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *View represents and manages the user interface
@@ -23,23 +23,20 @@ public class View {
         String num = scanner.next();
         return num;
     }
-    
+
     /**
-     * Takes new input array 
-     * 
-     * @return new input array
+     *
+     * @return
      */
-    public String[] getInputArray()
+    public List<String> getInputList()
     {
         System.out.println("There is no arguments passed, please provide arabic number or valid roman numeral");
         Scanner scanner = new Scanner (System.in);
-        
         String inputLine = scanner.nextLine();
-        String[] inputArr = inputLine.split(" ");
-        
-        return inputArr;
-    }
+        List<String> inputList = new ArrayList<String>(Arrays.asList(inputLine.split(" ")));
 
+        return inputList;
+    }
     /**
      * Prints the result on the screen
      * 

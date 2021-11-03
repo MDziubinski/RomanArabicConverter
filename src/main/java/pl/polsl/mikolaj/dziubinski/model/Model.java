@@ -1,16 +1,19 @@
 package pl.polsl.mikolaj.dziubinski.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
- *Model allows to perform all of the needed calculations 
+ *Model allows to perform all the needed calculations
  * 
  * @author mikol
  * @version 1.2
  */
 public class Model {
-    /**All specific roman signs */
-    private final String[] romanNums = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV","I"};
-    /**Arabic representation of Roman numeral */
-    private final int[] arabicNums = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}; 
+
+    private final List<String> romanNumerals = new ArrayList<String>(Arrays.asList("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV","I"));
+    private final List<Integer> arabicNumerals = new ArrayList<Integer>(Arrays.asList(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1));
     /**Final Roman numeral as a result */
     private String finalRoman = "";
     /**Current numeral */
@@ -28,7 +31,7 @@ public class Model {
      */
     public int validateInput(String num) 
     {
-        int inputVal = 0;
+        int inputVal;
         try 
         {
            inputVal = checkInput(num);
@@ -36,11 +39,16 @@ public class Model {
         catch(InputException ex)
         {
            inputVal = 0;
-           
         }
         return inputVal;
     }
     
+    /**
+     *
+     * @param num
+     * @return
+     * @throws InputException
+     */
     public int checkInput(String num) throws InputException
     {
         if(num.matches("\\d+") && !num.matches("0"))
@@ -56,36 +64,36 @@ public class Model {
             throw new InputException();
         }
     }
+
     /**
-     * Verifies if passed input array is valid 
-     * 
-     * @param inputArray array passed by main function arguments or user input
-     * @return Boolean value marks if array is empty or not
+     *
+     * @param inputList
+     * @return
      */
-    public Boolean validateInputArray(String[] inputArray)
+    public Boolean validateInputList(List<String> inputList)
     {
-        return error = inputArray.length == 0;
+        return inputList.isEmpty();
     }
-    
+
     /**
-     * Converts Arabic numeral into roman numeral
-     * 
-     * @param num Arabic number
+     *
+     * @param num
      */
-    public void getRomanNumeral(int num)
+    public void getRomanNumeralList(int num)
     {
-        for (int i = 0; i < arabicNums.length; i++)
+        for(int i = 0; i < arabicNumerals.size(); i++)
         {
-            currentNum = num / arabicNums[i];
+            var temp =arabicNumerals.get(i);
+            currentNum = num / temp.intValue();
             if (currentNum == 0)
             {
                 continue; //skips current iteration of the loop
             }
             for(int j = 0; j <currentNum; j++)
             {
-                finalRoman += romanNums[i];
+                finalRoman = finalRoman + romanNumerals.get(i);
             }
-            num = num % arabicNums[i];
+            num = num % temp;
         }
     }
     
@@ -183,6 +191,5 @@ public class Model {
          */
         public InputException()
         {}
-        
     }
 }
