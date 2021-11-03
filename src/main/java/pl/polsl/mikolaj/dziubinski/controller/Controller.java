@@ -83,7 +83,7 @@ public class Controller {
      */
     public void countArabicToRomanNum(int num)
     {
-       controllerModel.getRomanNumeralList(num);
+       controllerModel.getRomanNumeral(num);
        updateView(controllerModel.passResultArabic(), arabicInput, 0);
     }
     

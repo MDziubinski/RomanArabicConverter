@@ -25,8 +25,9 @@ public class View {
     }
 
     /**
-     *
-     * @return
+     * Takes new input list from user
+     * 
+     * @return new input list
      */
     public List<String> getInputList()
     {

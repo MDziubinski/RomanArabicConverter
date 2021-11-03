@@ -37,7 +37,7 @@ public class ModelTest {
      * Test of getRomanNumeralList method, of class Model.
      */
     @Test
-    public void testGetRomanNumeralList() {
+    public void testGetRomanNumeral() {
     }
 
     /**

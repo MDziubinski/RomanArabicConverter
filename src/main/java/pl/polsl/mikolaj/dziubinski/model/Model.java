@@ -11,8 +11,9 @@ import java.util.List;
  * @version 1.2
  */
 public class Model {
-
+    /**List of Roman numerals in string format */
     private final List<String> romanNumerals = new ArrayList<String>(Arrays.asList("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV","I"));
+    /**List of Arabic numerals in string format */
     private final List<Integer> arabicNumerals = new ArrayList<Integer>(Arrays.asList(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1));
     /**Final Roman numeral as a result */
     private String finalRoman = "";
@@ -24,7 +25,7 @@ public class Model {
     private Boolean error = false;
     
     /**
-     * Verifies the correctness of the input
+     * Validates the input
      * 
      * @param num passed input argument
      * @return integer which marks if the input is correct and distinguish if it is an Arabic numeral or Roman numeral 
@@ -44,10 +45,11 @@ public class Model {
     }
     
     /**
-     *
-     * @param num
-     * @return
-     * @throws InputException
+     * Verifies if input is valid Arabic number or Roman numeral
+     * 
+     * @param num input string 
+     * @return int flag describing type of input
+     * @throws InputException exception is input is not valid
      */
     public int checkInput(String num) throws InputException
     {
@@ -66,9 +68,10 @@ public class Model {
     }
 
     /**
-     *
-     * @param inputList
-     * @return
+     * Checks if input list is empty
+     * 
+     * @param inputList input list of strings
+     * @return Boolean accordingly if empty or not
      */
     public Boolean validateInputList(List<String> inputList)
     {
@@ -76,10 +79,11 @@ public class Model {
     }
 
     /**
-     *
-     * @param num
+     * Converts Arabic numeral into roman numeral
+     * 
+     * @param num Arabic numeral
      */
-    public void getRomanNumeralList(int num)
+    public void getRomanNumeral(int num)
     {
         for(int i = 0; i < arabicNumerals.size(); i++)
         {
@@ -100,7 +104,7 @@ public class Model {
     /**
      * Converts roman numeral into Arabic numeral
      * 
-     * @param romanNum roman numeral 
+     * @param romanNum Roman numeral 
      */
     public void getArabicNumeral (String romanNum)
     {
