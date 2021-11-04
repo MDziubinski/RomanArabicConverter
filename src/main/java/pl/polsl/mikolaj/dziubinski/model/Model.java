@@ -7,7 +7,7 @@ import java.util.List;
 /**
  *Model allows to perform all the needed calculations
  * 
- * @author mikol
+ * @author Mikolaj Dziubinski
  * @version 1.2
  */
 public class Model {

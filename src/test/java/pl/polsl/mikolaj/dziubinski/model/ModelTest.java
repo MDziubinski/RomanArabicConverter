@@ -6,8 +6,10 @@ import org.junit.jupiter.params.provider.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *
- * @author mikol
+ * Test model class 
+ * 
+ * @author Mikolaj Dziubinski
+ * @version 1.2
  */
 public class ModelTest {
     
@@ -44,17 +46,21 @@ public class ModelTest {
      * Parameterized test of getRomanNumeralList method, of class Model.
      */
     @ParameterizedTest
-    @CsvSource({"50, L", "19, XIX", "55, LV"})
+    @CsvSource({"50, L", "19, XIX", "55, LV", "5, 5"})
     public void testGetRomanNumeral(int input, String output) {
         model.getRomanNumeral(input);
         assertEquals(model.passResultArabic(), output, "Obtained values are not correct");
     }
 
     /**
-     * Test of getArabicNumeral method, of class Model.
+     * Parameterized test of getArabicNumeral method, of class Model.
      */
-    @Test
-    public void testGetArabicNumeral() {
+    @ParameterizedTest
+    @CsvSource({"L, 50", "XIX, 19", "LV, 55", "5, 5"})
+    public void testGetArabicNumeral(String input, int output) {
+        model.getArabicNumeral(input);
+        assertEquals(model.passResultRoman(), output, "Obtained values are not correct");
+        
     }
 
     /**
