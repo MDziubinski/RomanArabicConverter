@@ -24,7 +24,13 @@ public class Controller {
     private List<String> inputList = new ArrayList<String>();
     /**Arabic numeral input */
     private int arabicInput = 0;
-
+    
+    /**
+     * Controller clas constructor
+     *
+     * @param view View class object
+     * @param model Model class object
+     */
     public Controller(View view, Model model)
     {
         this.controllerView = view;

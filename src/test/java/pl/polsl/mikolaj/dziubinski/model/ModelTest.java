@@ -1,6 +1,8 @@
 package pl.polsl.mikolaj.dziubinski.model;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -9,7 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ModelTest {
     
-    public ModelTest() {
+    private Model model;
+    
+    @BeforeEach
+    public void createModel()
+    {
+        model = new Model();
     }
 
     /**
@@ -34,10 +41,13 @@ public class ModelTest {
     }
 
     /**
-     * Test of getRomanNumeralList method, of class Model.
+     * Parameterized test of getRomanNumeralList method, of class Model.
      */
-    @Test
-    public void testGetRomanNumeral() {
+    @ParameterizedTest
+    @CsvSource({"50, L", "19, XIX", "55, LV"})
+    public void testGetRomanNumeral(int input, String output) {
+        model.getRomanNumeral(input);
+        assertEquals(model.passResultArabic(), output, "Obtained values are not correct");
     }
 
     /**
@@ -45,20 +55,6 @@ public class ModelTest {
      */
     @Test
     public void testGetArabicNumeral() {
-    }
-
-    /**
-     * Test of passResultArabic method, of class Model.
-     */
-    @Test
-    public void testPassResultArabic() {
-    }
-
-    /**
-     * Test of passResultRoman method, of class Model.
-     */
-    @Test
-    public void testPassResultRoman() {
     }
 
     /**
