@@ -16,7 +16,7 @@ public class RomanArabicConverter {
     * 
     * @param args the command line arguments
     */
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         View view = new View();
         Model model = new Model();

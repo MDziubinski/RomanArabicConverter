@@ -11,10 +11,7 @@ import java.util.List;
  * @version 1.2
  */
 public class Model {
-    /**List of Roman numerals in string format */
-    private final List<String> romanNumerals = new ArrayList<String>(Arrays.asList("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV","I"));
-    /**List of Arabic numerals in string format */
-    private final List<Integer> arabicNumerals = new ArrayList<Integer>(Arrays.asList(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1));
+
     /**Final Roman numeral as a result */
     private String finalRoman = "";
     /**Current numeral */
@@ -23,7 +20,34 @@ public class Model {
     private int finalArabic = 0;
     /**Flag to check valid array input*/
     private Boolean error = false;
-    
+
+    public enum romanNumerals {
+        M(1000),
+        CM(900),
+        D(500),
+        CD(400),
+        C(100),
+        XC(90),
+        L(50),
+        XL(40),
+        X(10),
+        IX(9),
+        V(5),
+        IV(4),
+        I(1);
+
+        int arabicValue;
+
+        romanNumerals(int value)
+        {
+            this.arabicValue = value;
+        }
+        public int getValue()
+        {
+            return arabicValue;
+        }
+    }
+
     /**
      * Validates the input
      * 
@@ -85,22 +109,21 @@ public class Model {
      */
     public void getRomanNumeral(int num)
     {
-        for(int i = 0; i < arabicNumerals.size(); i++)
+        for(romanNumerals romanNumeral: romanNumerals.values())
         {
-            var temp =arabicNumerals.get(i);
-            currentNum = num / temp.intValue();
+            currentNum = num/romanNumeral.getValue();
             if (currentNum == 0)
             {
                 continue; //skips current iteration of the loop
             }
             for(int j = 0; j <currentNum; j++)
             {
-                finalRoman = finalRoman + romanNumerals.get(i);
+                finalRoman = finalRoman + romanNumeral;
             }
-            num = num % temp;
+            num = num % romanNumeral.getValue();
         }
     }
-    
+
     /**
      * Converts roman numeral into Arabic numeral
      * 
@@ -197,3 +220,4 @@ public class Model {
         {}
     }
 }
+

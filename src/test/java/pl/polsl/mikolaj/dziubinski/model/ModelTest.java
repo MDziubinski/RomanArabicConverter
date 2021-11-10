@@ -46,7 +46,7 @@ public class ModelTest {
      * Parameterized test of getRomanNumeralList method, of class Model.
      */
     @ParameterizedTest
-    @CsvSource({"50, L", "19, XIX", "55, LV", "5, 5"})
+    @CsvSource({"50, L", "19, XIX", "55, LV"})
     public void testGetRomanNumeral(int input, String output) {
         model.getRomanNumeral(input);
         assertEquals(model.passResultArabic(), output, "Obtained values are not correct");
@@ -56,7 +56,7 @@ public class ModelTest {
      * Parameterized test of getArabicNumeral method, of class Model.
      */
     @ParameterizedTest
-    @CsvSource({"L, 50", "XIX, 19", "LV, 55", "5, 5"})
+    @CsvSource({"L, 50", "XIX, 19", "LV, 55"})
     public void testGetArabicNumeral(String input, int output) {
         model.getArabicNumeral(input);
         assertEquals(model.passResultRoman(), output, "Obtained values are not correct");
