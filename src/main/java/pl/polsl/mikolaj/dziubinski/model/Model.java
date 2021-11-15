@@ -87,7 +87,7 @@ public class Model {
         }
         else
         {
-            throw new InputException();
+            throw new InputException("Input values is neither a valid Roman numeral or Arabic number");
         }
     }
 
@@ -218,6 +218,11 @@ public class Model {
          */
         public InputException()
         {}
+        
+        public InputException(String message)
+        {
+            super(message);
+        }
     }
 }
 
