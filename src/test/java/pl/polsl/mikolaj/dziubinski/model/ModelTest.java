@@ -118,6 +118,11 @@ public class ModelTest {
         Arguments.of("MMMCCXCV", 3295),
         Arguments.of("MMMDCCCXLIX", 3849),
         Arguments.of("MCCCLXXV", 1375),
+        Arguments.of("XIX", 19),
+        Arguments.of("CXL", 140),
+        Arguments.of("CXX", 120),
+        Arguments.of("MMMCCCXXXVIII", 3338),
+        Arguments.of("XXXIX", 39),
         Arguments.of("CCCXII", 312),
         Arguments.of("XCVIII", 98)
         );  
