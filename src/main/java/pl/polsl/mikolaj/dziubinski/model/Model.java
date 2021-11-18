@@ -205,27 +205,5 @@ public class Model {
     {
         return finalArabic;
     }
-    
-    /**
-     * Exception class for objects when passed input is invalid
-     */
-    public class InputException extends Exception
-    {
-        /**
-         * Non parameter constructor
-         */
-        public InputException()
-        {}
-        
-        /**
-         * Exception class parametrized constructor
-         * 
-         * @param message display message
-         */
-        public InputException(String message)
-        {
-            super(message);
-        }
-    }
 }
 

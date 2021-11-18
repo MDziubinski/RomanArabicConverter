@@ -7,7 +7,6 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 import static org.junit.jupiter.api.Assertions.*;
-import pl.polsl.mikolaj.dziubinski.model.Model.InputException;
 
 /**
  * Test model class 
@@ -45,7 +44,7 @@ public class ModelTest {
      * @throws InputException invalid Arabic number or Roman numeral
      */
     @Test
-    public void testCheckInput() throws Exception {
+    public void testCheckInput() throws InputException {
       try
       {
           assertEquals(model.checkInput("10"), 1, "Correct Arabic number should give a 1 as result");
