@@ -106,7 +106,7 @@ public class ModelTest {
     }
     
     /**
-     * Stream method to pass values to unit parametrized unit tests
+     * Stream method to pass values to parametrized unit tests
      * 
      * @return stream of arguments consisting of Roman numeral of type string and Arabic number of type int
      */
