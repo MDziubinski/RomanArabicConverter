@@ -20,20 +20,34 @@ public class Model {
 
     /**enum for roman numerals*/
     public enum romanNumerals {
+        /**Roman representation of Arabic 1000 */
         M(1000),
+        /**Roman representation of Arabic 900 */
         CM(900),
+        /**Roman representation of Arabic 500 */
         D(500),
+        /**Roman representation of Arabic 400 */
         CD(400),
+        /**Roman representation of Arabic 100 */
         C(100),
+        /**Roman representation of Arabic 90 */
         XC(90),
+        /**Roman representation of Arabic 50 */
         L(50),
+        /**Roman representation of Arabic 40 */
         XL(40),
+        /**Roman representation of Arabic 10 */
         X(10),
+        /**Roman representation of Arabic 9 */
         IX(9),
+        /**Roman representation of Arabic 5 */
         V(5),
+        /**Roman representation of Arabic 4 */
         IV(4),
+        /**Roman representation of Arabic 1 */
         I(1);
-
+        
+        /**Integer value of enum element */
         int arabicValue;
         
         /**
