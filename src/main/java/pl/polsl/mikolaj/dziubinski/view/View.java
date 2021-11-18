@@ -6,7 +6,7 @@ import java.util.*;
  *View represents and manages the user interface
  * 
  * @author Mikolaj Dziubinski
- * @version 1.2
+ * @version 1.3
  */
 public class View {
     
@@ -31,10 +31,10 @@ public class View {
      */
     public List<String> getInputList()
     {
-        System.out.println("There is no arguments passed, please provide arabic number or valid roman numeral");
+        System.out.println("There is no arguments passed, please provide arabic number or valid roman numeral.");
         Scanner scanner = new Scanner (System.in);
         String inputLine = scanner.nextLine();
-        List<String> inputList = new ArrayList<String>(Arrays.asList(inputLine.split(" ")));
+        List<String> inputList = new ArrayList<>(Arrays.asList(inputLine.split(" ")));
 
         return inputList;
     }

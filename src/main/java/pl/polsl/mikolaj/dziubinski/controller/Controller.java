@@ -4,14 +4,15 @@ import pl.polsl.mikolaj.dziubinski.model.Model;
 import pl.polsl.mikolaj.dziubinski.view.View;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * Controller class allows to separate model and view classes
  *
  * @author Mikolaj Dziubinski
- * @version 1.2
+ * @version 1.3
  */
 public class Controller {
     /**View object */
@@ -26,7 +27,7 @@ public class Controller {
     private int arabicInput = 0;
     
     /**
-     * Controller clas constructor
+     * Controller class constructor
      *
      * @param view View class object
      * @param model Model class object
@@ -44,7 +45,10 @@ public class Controller {
      */
     public void processInput(String[] num)
     {
-        Collections.addAll(inputList, num);
+        //Passing input array to array list with use of stream
+        Stream<String> inputStreamString = Arrays.stream(num);
+        inputStreamString.forEach(x -> inputList.add(x));
+        
         //Verifying if the passed array is empty or not
         while(controllerModel.validateInputList(inputList) == true)
         {
@@ -71,7 +75,7 @@ public class Controller {
             switch(inputVerif)
             {
                 case 1:
-                    arabicInput = controllerModel.stringToInt(temp);
+                    arabicInput = Integer.parseInt(temp);
                     countArabicToRomanNum(arabicInput);
                     break;
                 case 2:

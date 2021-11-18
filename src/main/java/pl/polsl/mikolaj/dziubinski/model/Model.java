@@ -1,14 +1,13 @@
 package pl.polsl.mikolaj.dziubinski.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
 
 /**
  *Model allows to perform all the needed calculations
  * 
  * @author Mikolaj Dziubinski
- * @version 1.2
+ * @version 1.3
  */
 public class Model {
 
@@ -18,9 +17,8 @@ public class Model {
     private int currentNum = 0;
     /**Final Arabic numeral as a result */
     private int finalArabic = 0;
-    /**Flag to check valid array input*/
-    private Boolean error = false;
 
+    /**enum for roman numerals*/
     public enum romanNumerals {
         M(1000),
         CM(900),
@@ -37,11 +35,22 @@ public class Model {
         I(1);
 
         int arabicValue;
-
+        
+        /**
+         *enum constructor 
+         *
+         *@param value element value
+         */
         romanNumerals(int value)
         {
             this.arabicValue = value;
         }
+        
+        /**
+         *enum getter to pass values 
+         *
+         * @return passed value pointed by the iterator
+         */
         public int getValue()
         {
             return arabicValue;
@@ -81,13 +90,13 @@ public class Model {
         {   
             return 1;
         }
-        else if(num.matches("^M{0,6}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"))
+        else if(num.matches("^M{0,9}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"))
         {
             return 2;
         }
         else
         {
-            throw new InputException("Input values is neither a valid Roman numeral or Arabic number");
+            throw new InputException("Input value is neither a valid Roman numeral or Arabic number");
         }
     }
 
@@ -198,17 +207,6 @@ public class Model {
     }
     
     /**
-     * Parses the number from string to integer
-     * 
-     * @param num Arabic number in string
-     * @return parsed integer
-     */
-    public int stringToInt(String num)
-    {
-        return Integer.parseInt(num);
-    }
-    
-    /**
      * Exception class for objects when passed input is invalid
      */
     public class InputException extends Exception
@@ -219,6 +217,11 @@ public class Model {
         public InputException()
         {}
         
+        /**
+         * Exception class parametrized constructor
+         * 
+         * @param message display message
+         */
         public InputException(String message)
         {
             super(message);
