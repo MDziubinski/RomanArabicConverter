@@ -4,7 +4,7 @@ package pl.polsl.mikolaj.dziubinski.model;
 import java.util.List;
 
 /**
- *Model allows to perform all the needed calculations
+ * Model allows to perform all the needed calculations
  * 
  * @author Mikolaj Dziubinski
  * @version 1.3
