@@ -76,7 +76,9 @@ public class ModelTest {
         notEmptyInputList.add("Test");
 
         assertEquals(model.validateInputList(emptyInputList), true, "Input Array should not be empty");
+        assertTrue(emptyInputList.isEmpty(), "Input Array should not be empty");
         assertEquals(model.validateInputList(notEmptyInputList), false, "InputArray should be empty");
+        assertFalse(notEmptyInputList.isEmpty(), "InputArray should be empty");
     }
 
     /** 
