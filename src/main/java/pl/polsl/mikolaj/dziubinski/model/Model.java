@@ -19,7 +19,7 @@ public class Model {
     private int finalArabic = 0;
 
     /**enum for roman numerals*/
-    public enum romanNumerals {
+    public enum RomanNumerals {
         /**Roman representation of Arabic 1000 */
         M(1000),
         /**Roman representation of Arabic 900 */
@@ -55,7 +55,7 @@ public class Model {
          *
          *@param value element value
          */
-        romanNumerals(int value)
+        RomanNumerals(int value)
         {
             this.arabicValue = value;
         }
@@ -132,7 +132,7 @@ public class Model {
      */
     public void getRomanNumeral(int num)
     {
-        for(romanNumerals romanNumeral: romanNumerals.values())
+        for(RomanNumerals romanNumeral: RomanNumerals.values())
         {
             currentNum = num/romanNumeral.getValue();
             if (currentNum == 0)
