@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Test model class 
  * 
  * @author Mikolaj Dziubinski
- * @version 1.3
+ * @version 1.4
  */
 public class ModelTest {
     
@@ -26,44 +26,6 @@ public class ModelTest {
     public void createModel()
     {
         model = new Model();
-    }
-
-    /**
-     * Test of validateInput method, of class Model.
-     * @param input string with input value to test
-     * @param output supposed integer as result
-     */
-    @ParameterizedTest
-    @CsvSource({"50, 1", "19, 1", "XX, 2", "DXDXDXD, 0"})
-    public void testValidateInput(String input, int output) {
-        assertEquals(model.validateInput(input), output, "Inputs are not validated correctly");
-    }
-
-    /**
-     * Test of checkInput method, of class Model.
-     * @throws InputException invalid Arabic number or Roman numeral
-     */
-    @Test
-    public void testCheckInput() throws InputException {
-      try
-      {
-          assertEquals(model.checkInput("10"), 1, "Correct Arabic number should give a 1 as result");
-      } catch(InputException ex){
-          fail("Tested numeral is not valid Arabic or Roman numeral");
-      }
-      
-      try
-      {
-          assertEquals(model.checkInput("XX"), 2, "Correct Roman Numeral should give a 2 as result");
-      } catch(InputException ex){
-          fail("Tested numeral is not valid Arabic or Roman numeral");
-      }
-      
-      try
-      {
-          int temp = model.checkInput("TEST");
-          fail("Tested numeral is not valid Arabic or Roman numeral");
-      } catch(InputException ex){}
     }
 
     /**
