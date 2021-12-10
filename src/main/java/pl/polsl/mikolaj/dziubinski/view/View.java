@@ -161,6 +161,7 @@ public class View {
     public void getPopupEmptyInput()
     {
         JOptionPane.showMessageDialog(null, "Input text is empty!");
+    cleanOut();
     }
     
     /**
@@ -174,7 +175,9 @@ public class View {
         {
             JOptionPane.showMessageDialog(null, "Please verify theses values '" + message + "' as they are not valid arabic numbers");
         }
+        else
         JOptionPane.showMessageDialog(null, "Please verify values, most of them are not valid arabic numbers");
+        cleanOut();
     }
         
     /**
@@ -188,7 +191,9 @@ public class View {
         {
             JOptionPane.showMessageDialog(null, "Please verify theses values '" + message + "' as they are not valid Roman numerals");
         }
+        else
         JOptionPane.showMessageDialog(null, "Please verify values, most of them are not valid Roman numerals");
+        cleanOut();
     }
     
     /**
@@ -202,7 +207,9 @@ public class View {
         {
             JOptionPane.showMessageDialog(null, "Please verify theses values '" + message + "' as they are not valid Roman numerals nor arabic numbers");
         }
+        else
         JOptionPane.showMessageDialog(null, "Please verify values, most of them are not valid Roman numerals nor arabic numbers");
+        cleanOut();
     }
        
     /**

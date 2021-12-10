@@ -71,9 +71,11 @@ public class Controller {
    
     public void verifyInput()
     {
-     inputText = controllerView.getInputString();
+     String inputTextAll = controllerView.getInputString();
+     inputText = inputTextAll.toUpperCase();
+     
      inputList = new ArrayList<>(Arrays.asList(inputText.split("\\W+")));
-     System.out.println(inputList.size());
+     
     int inputVerif = 0;
      if((inputList.size() == 1) && inputList.get(0).isEmpty())
      {
@@ -112,7 +114,9 @@ public class Controller {
            {
                String incorrectInput = String.join(" ", inputListInCorrect);
                controllerView.getPopupWrongArabicInput(incorrectInput);
+               controllerView.setLogTable("Incorrect Input.");
                inputListInCorrect.clear();
+               inputListCorrect.clear();
            }
         }
         else if (mode.equals("Roman to Arabic"))
@@ -142,7 +146,9 @@ public class Controller {
            {
                String incorrectInput = String.join(" ", inputListInCorrect);
                controllerView.getPopupWrongRomanInput(incorrectInput);
+               controllerView.setLogTable("Incorrect Input.");
                inputListInCorrect.clear();
+               inputListCorrect.clear();
            }
         }
         else if (mode.equals("Inteligent"))
@@ -182,9 +188,10 @@ public class Controller {
            {
                String incorrectInput = String.join(" ", inputListInCorrect);
                controllerView.getPopupWrongIntelligentInput(incorrectInput);
-               
+               controllerView.setLogTable("Incorrect Input.");
                inputModeList.clear();
                inputListInCorrect.clear();
+               inputListCorrect.clear();
            }
            inputModeList.clear();
         }
@@ -192,7 +199,8 @@ public class Controller {
         
         inputListInCorrect.clear();
      } 
-    
+               inputListInCorrect.clear();
+               inputListCorrect.clear();
     }
     
 }
